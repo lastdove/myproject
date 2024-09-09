@@ -6,10 +6,11 @@ public class App {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
         Scanner sc = new Scanner(System.in);
+        boolean checking = true;
         int num1;
         int num2;
 
-        while (true) {
+        while (checking) {
             System.out.print("연산기호를 입력해주세요. : ");
             String str = sc.nextLine();
 
@@ -47,6 +48,7 @@ public class App {
                 case "1" :
                     continue;
                 case "2" :
+                    checking = false;
                     break;
                 case "3" :
                     System.out.print("삭제할 값을 입력하세요 :");

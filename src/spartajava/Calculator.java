@@ -11,6 +11,7 @@ public class Calculator {
     public int error;
 
     public double getResult() {
+        calculate();
         int lastindex = result.size() - 1;
         if(lastindex < 0 || error == 1) {
             return 0;
@@ -23,7 +24,6 @@ public class Calculator {
         this.operation = operation;
         this.num1 = num1;
         this.num2 = num2;
-        calculate();
     }
 
     public void delete(int set, double num) {
